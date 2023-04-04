@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LogIn</title>
+
+<style>
+*{ font-family:TimesNewRoman; }
+body{
+
+background: #50C878;    
+
+}
+
+#form{
+
+background:#E41B17; border:none; border-radius: 10%; height:50vh; width:65vw; display:block; margin:auto; padding:auto;
+
+}
+
+input{ display: block; margin:auto; height:auto; width:auto; }
+
+label{ font-size: 1em; color:black; }
+
+.button{ background:#6A0DAD; height:auto; width:auto;font-size: 1.5em; color:snow; margin:auto; padding:auto; display: block; }
+
+h1{ font-size: 3em; color:indigo; }
+
+a{ background:yellow; height:auto; width:35vw; display:block; border:none; font-size: 1.5em; color:black; text-decoration:none; padding:auto; margin:auto; }
+
+p{ margin:auto; display:block; color:blue;}
+
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+<img style="border:none; margin:auto; height:8vh; width:8vw; overflow:hidden; border-radius:5%;" src="https://te.legra.ph/file/1456591743bc08490d50c.jpg" alt="logo, Blind Tech Agent">
+
+<h1>LOG IN</h1>
+
+<form autocomplete="off" id="form">
+<label for="email">Enter your Email ID</label>
+
+<input type="email" id="email" required/>
+
+<label for="password">Enter your Password</label>
+
+<input type="password" id="password" required/>
+
+<br>
+
+<button class="button" onclick="login()">Log In</button>
+<br>
+<br>
+<button class="button" type="reset">Clear inputs</button>
+
+</form>
+
+<p>Don't have an Account?</p>
+<br>
+<br>
+<a href="Sign Up.html">Sign Up</a>
+<br>
+<button class="button" onclick="DeleteAccount()">Delete Account</button>
+</center>
+<script>
+function login() {
+var Email = document.getElementById("email").value;
+var pass = document.getElementById("password").value;
+var email = localStorage.getItem("EMAIL");
+var password = localStorage.getItem("PASSWORD");
+if(Email == email & pass == password){
+window.location.href="index.html";
+}
+else{ window.alert("wrong data"); }
+}
+function DeleteAccount() {  localStorage.clear();  }
+</script>
+</body>
+
+</html>
