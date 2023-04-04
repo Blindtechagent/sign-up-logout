@@ -82,7 +82,7 @@ var pass = document.getElementById("password").value;
 var email = localStorage.getItem("EMAIL");
 var password = localStorage.getItem("PASSWORD");
 if(Email == email & pass == password){
-window.location.href="index.html";
+location.replace("index.html");
 }
 else{ window.alert("wrong data"); }
 }
